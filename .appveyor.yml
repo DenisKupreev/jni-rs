@@ -1,8 +1,8 @@
 os: Visual Studio 2017
 
 install:
-  - Get-ChildItem -Path C:\Progra~1\Java\jdk1.8.0\lib\
-  - Get-ChildItem -Path C:\Progra~1\Java\jdk1.8.0\jre\bin\server\
+  - ps: Get-ChildItem -Path C:\Progra~1\Java\jdk1.8.0\lib\
+  - ps: Get-ChildItem -Path C:\Progra~1\Java\jdk1.8.0\jre\bin\server\
   - appveyor DownloadFile https://win.rustup.rs/ -FileName rustup-init.exe
   - rustup-init -y --default-toolchain stable --default-host x86_64-pc-windows-msvc
   - set PATH=%PATH%;%USERPROFILE%\.cargo\bin
